@@ -90,7 +90,7 @@ export default function Shape({ id, type, position, size, color }: ShapeType) {
 
   return (
     <>
-      {/* @ts-ignore */}
+      {/* @ts-expect-error: Types inheritance problem */}
       <mesh {...bind()} ref={ref} position={[position[0], position[1], 0]}>
         {type === 'rectangle' ? (
           <planeGeometry args={size} />
